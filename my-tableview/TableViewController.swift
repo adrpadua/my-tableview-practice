@@ -15,7 +15,9 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.tableView.dataSource = myDataSource
+        self.tableView.delegate = myDelegate
         // Do any additional setup after loading the view.
     }
 
