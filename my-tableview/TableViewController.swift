@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TableViewController.swift
 //  my-tableview
 //
 //  Created by Adrian Padua on 5/24/16.
@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TableViewController: UITableViewController {
 
+    let myDataSource = MyTableViewDataSource(happyThings: ["Simple Plan", "Blink 182", "Yellowcard", "Fall Out Boy"], cellIdentifier: "cell")
+    let myDelegate = MyTableViewDelegate()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +24,4 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
 }
-
